@@ -4,9 +4,9 @@ import {removeExpense} from '../actions/expenses';
 
 const ExpenseListItem = (props)=>(
     <div>
-        {props.expense.description}
-        {props.expense.amount}
-        {props.expense.createdAt}   
+        <h3>{props.expense.description}</h3>
+        <p>{props.expense.amount}</p>
+        {props.expense.createdAt}<br/>   
         <button onClick={()=>{
             props.dispatch(removeExpense(props.expense))}}>
         Remove</button>  

@@ -15,13 +15,15 @@ store.dispatch(addExpense({
     amount: 45000
 }));
 store.dispatch(addExpense({
-    description:'gas bill'
+    description:'gas bill',
+    createdAt: 1000
 }));
-store.dispatch(setTextFilter('bill'));
+store.dispatch(addExpense({
+    description:'rent',
+    amount: 99999
+}));
 
 const state = store.getState();
-
-// const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 
 //react-redux (Provider) helps us to make the store local to the react components
 const jsx = (
