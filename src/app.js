@@ -11,19 +11,17 @@ import {Provider} from 'react-redux';
 
 const store = configureStore();
 store.dispatch(addExpense({
-    description:'water bill'
+    description:'water bill',
+    amount: 45000
 }));
 store.dispatch(addExpense({
     description:'gas bill'
 }));
-store.dispatch(setTextFilter({
-    text:'water'
-}));
+store.dispatch(setTextFilter('bill'));
 
 const state = store.getState();
 
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-// console.log(visibleExpenses);
+// const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 
 //react-redux (Provider) helps us to make the store local to the react components
 const jsx = (
