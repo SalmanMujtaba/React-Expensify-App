@@ -15,10 +15,12 @@ export const addExpense = ({
     }
 });
 
-export const removeExpense=({id}={})=>({
-    type: REMOVE_EXPENSE,
-    id
-});
+export const removeExpense=({id}={})=>(
+    {
+        type: 'REMOVE_EXPENSE',
+        id
+    }
+);
 
 //if there is no id, update there is no change required, hence no default values
 export const editExpense=(id,updates)=>({
