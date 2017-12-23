@@ -11,6 +11,8 @@ const ExpenseList = (props)=>(
     </div>
 );
 
+//mapStateToProps is a HOF which attaches the store data to the component. The 
+//Provider in app js allows us to use connect
 const mapStateToProps = (state) =>{
     return {
         //we want only selective data to be rendered. The dispatch call from the expenselistfilter

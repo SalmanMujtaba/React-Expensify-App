@@ -2,8 +2,8 @@
   "name": "expense",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Andrew Mead",
-  "license": "MIT",
+  "author": "Salman Mujtaba",
+  "license": "",
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack",

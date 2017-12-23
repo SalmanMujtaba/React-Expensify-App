@@ -12,12 +12,12 @@ export default (state = defaultState,action)=>{
             return state.filter(({id})=>id!==action.id);  
         case 'EDIT_EXPENSE':
             return state.map((expense)=>{
-                if(action.id===expense.id){
+                if(expense.id===action.id){
                     return {
-                        //add the fields specified by user, while calling dispatch function 
                         //to expense list. Dispatch call->editExpense Action -> reducer
+                        //add the fields specified by user, while calling dispatch function 
                         ...expense,
-                        ...action.expense
+                        ...action.updates
                     };
                 }else{
                     return expense;
