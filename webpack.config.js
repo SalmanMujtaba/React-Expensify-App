@@ -1,4 +1,5 @@
-const path = require('path');
+ const path = require('path');
+ //extract parts of webpack, so that css files can be separated out
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = (env) => {
